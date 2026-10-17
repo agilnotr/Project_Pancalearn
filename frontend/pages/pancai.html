@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B91C2C'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='800' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EP%3C/text%3E%3C/svg%3E" />
+<title>PancaAI — PancaLearn</title>
+<meta name="description" content="PancaAI adalah asisten belajar PancaLearn untuk bertanya seputar Pancasila, mulai dari sejarah, makna sila, hingga studi kasus." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/navbar.css" />
+<link rel="stylesheet" href="../css/pancai.css" />
+<link rel="stylesheet" href="../css/footer.css" />
+</head>
+<body>
+
+<div id="navbar-mount"></div>
+
+<main>
+  <section class="container pancai-wrap">
+    <div class="chat-shell">
+      <header class="chat-header">
+        <div class="ai-avatar" aria-hidden="true">P</div>
+        <div class="chat-header-text">
+          <h1>PancaAI</h1>
+          <p class="chat-subtitle">AI Learning Assistant untuk membantu kamu memahami Pancasila.</p>
+          <p class="chat-status" id="chat-status" role="status" data-state="checking"><span class="status-dot" aria-hidden="true"></span><span id="chat-status-text">Memeriksa koneksi…</span></p>
+        </div>
+        <button type="button" class="btn btn-ghost" id="clear-chat-btn">Bersihkan Chat</button>
+      </header>
+
+      <div class="chat-notice hidden" id="chat-notice"></div>
+      <div class="chat-context-banner hidden" id="context-banner"></div>
+
+      <div class="chat-window" id="chat-window" role="log" aria-live="polite" aria-label="Percakapan dengan PancaAI" tabindex="0"></div>
+
+      <div class="quick-prompts" id="quick-prompts" role="group" aria-label="Contoh pertanyaan"></div>
+
+      <form class="chat-input-row" id="chat-form">
+        <textarea id="chat-input" rows="1" maxlength="1000" placeholder="Tulis pertanyaanmu tentang Pancasila..." autocomplete="off" aria-label="Tulis pertanyaan untuk PancaAI"></textarea>
+        <button type="submit" class="btn btn-primary" id="send-btn" aria-label="Kirim pesan" disabled>Kirim</button>
+      </form>
+      <p class="chat-hint caption">Enter untuk mengirim, Shift+Enter untuk baris baru. Jawaban AI bisa keliru, cocokkan dengan materi di PancaLearn.</p>
+    </div>
+  </section>
+</main>
+
+<div id="footer-mount"></div>
+
+<script src="../js/data.js"></script>
+<script src="../js/state.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/pancai.js"></script>
+</body>
+</html>

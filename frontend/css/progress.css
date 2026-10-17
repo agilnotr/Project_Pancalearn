@@ -1,0 +1,35 @@
+.progress-hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--on-primary);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  margin-bottom: 32px;
+}
+.progress-hero h2, .progress-hero p { color: var(--on-primary); }
+.progress-hero .progress-track { background: rgba(255,255,255,0.25); }
+.progress-hero .progress-fill { background: var(--on-primary); }
+.progress-hero-top { display:flex; justify-content: space-between; align-items:center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+
+.stat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px; }
+.stat-card { text-align: center; }
+.stat-card .stat-value { font-size: 1.6rem; font-weight: 800; color: var(--primary-text); }
+
+.progress-bars { display: flex; flex-direction: column; gap: 22px; margin-bottom: 32px; }
+.progress-bar-row .label-row { display:flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
+
+.achievement-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+/* Achievement terkunci: hanya ikon yang dipudarkan; judul & deskripsi tetap kontras penuh agar syaratnya terbaca */
+.achievement-card { text-align: center; border-style: dashed; }
+.achievement-card .ach-icon { font-size: 2rem; margin-bottom: 8px; opacity: 0.35; filter: grayscale(1); }
+.achievement-card.unlocked { border-style: solid; border-color: color-mix(in srgb, var(--success) 40%, var(--border)); }
+.achievement-card.unlocked .ach-icon { opacity: 1; filter: none; }
+.achievement-card h3 { font-size: 0.85rem; margin-bottom: 4px; }
+.achievement-card p { font-size: 0.75rem; margin: 0; }
+
+@media (max-width: 860px) {
+  .stat-cards { grid-template-columns: repeat(2, 1fr); }
+  .achievement-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .achievement-grid { grid-template-columns: repeat(2, 1fr); }
+}

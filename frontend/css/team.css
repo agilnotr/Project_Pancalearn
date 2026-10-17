@@ -1,0 +1,21 @@
+.team-card {
+  text-align: center;
+}
+.team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: var(--primary-light);
+  color: var(--primary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform var(--transition);
+}
+.team-card:hover .team-avatar { transform: scale(1.08); }
+.team-card h3 { margin-bottom: 2px; font-size: 1.05rem; }
+.team-role { color: var(--primary-text); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; display: block; }
+.team-card p { font-size: 0.85rem; margin-bottom: 0; }

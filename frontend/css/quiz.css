@@ -1,0 +1,17 @@
+/* Quiz. Komponen bersama (progress-label, answer-options, answer-feedback) ada di style.css */
+.quiz-wrap { max-width: 680px; margin: 0 auto; }
+.quiz-progress { margin-bottom: var(--spacing-lg); }
+.quiz-card { padding: var(--spacing-xl); }
+.quiz-question { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 20px; }
+.quiz-question:focus { outline: none; }
+.quiz-nav { display: flex; justify-content: flex-end; margin-top: var(--spacing-lg); }
+
+.quiz-result { text-align: center; padding: var(--spacing-2xl) var(--spacing-lg); }
+.quiz-result h2:focus { outline: none; }
+.result-score { font-size: 3rem; font-weight: 800; color: var(--primary-text); margin: 12px 0; }
+.result-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+
+@media (max-width: 640px) {
+  .quiz-card { padding: var(--spacing-lg) var(--spacing-md); }
+  .quiz-nav .btn { width: 100%; }
+}

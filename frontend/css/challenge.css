@@ -1,0 +1,13 @@
+.challenge-heading { font-size: 1.2rem; margin: 0 0 var(--spacing-xs); }
+.challenge-heading-weekly { margin-top: var(--spacing-2xl); }
+.challenge-note { margin: 0 0 var(--spacing-md); }
+.challenge-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg); }
+.challenge-card { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.challenge-title { margin: 0; font-size: 1.05rem; }
+.challenge-title:focus { outline: none; }
+.challenge-progress { display: flex; align-items: center; gap: 12px; }
+.challenge-progress .progress-track { flex: 1; }
+.challenge-card.ready { border-color: var(--primary); }
+.challenge-card.completed { border-color: color-mix(in srgb, var(--success) 40%, var(--border)); }
+.challenge-reward { font-weight: 700; color: var(--primary-text); }
+@media (max-width: 720px) { .challenge-grid { grid-template-columns: 1fr; } }

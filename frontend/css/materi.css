@@ -1,0 +1,76 @@
+.materi-toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-sm);
+}
+.materi-toolbar input,
+.materi-toolbar select {
+  min-height: 44px;
+  padding: 12px var(--spacing-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+.materi-toolbar input { flex: 1; min-width: 220px; }
+.materi-toolbar input::placeholder { color: var(--text-secondary); }
+.materi-count { margin: 0 0 var(--spacing-lg); }
+
+/* Groups: Materi Utama / Materi Pendalaman */
+.materi-group + .materi-group { margin-top: var(--spacing-2xl); }
+.materi-group-header { margin-bottom: var(--spacing-md); }
+.materi-group-header h2 { font-size: 1.35rem; margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: var(--spacing-sm); }
+.materi-group-header p { margin: 0; font-size: 0.92rem; }
+.materi-group-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px var(--spacing-sm);
+  border-radius: var(--radius-full);
+  background: var(--surface-alt);
+  color: var(--text-secondary);
+}
+
+.materi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); }
+.materi-card { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.materi-card h3, .materi-card p { margin: 0; }
+.materi-card p { flex: 1; font-size: 0.92rem; }
+.materi-card .btn { margin-top: var(--spacing-xs); }
+.materi-card-top { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-sm); }
+.materi-icon { font-size: 1.8rem; line-height: 1; }
+.materi-card.is-done { border-color: color-mix(in srgb, var(--success) 35%, var(--border)); }
+.empty-state { text-align: center; padding: var(--spacing-2xl) 0; color: var(--text-secondary); }
+.empty-state p { margin-bottom: var(--spacing-md); }
+
+/* ---------- Detail materi ---------- */
+.detail-header { padding: 48px 0 24px; }
+.detail-meta { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+.detail-section { margin: 32px 0; }
+.detail-section h2 { font-size: 1.25rem; margin-bottom: 14px; }
+.key-points li { padding: 10px 0; border-bottom: 1px dashed var(--border); color: var(--text-secondary); }
+.key-points li:before { content: '✓ '; color: var(--success); font-weight: 700; }
+.mini-quiz-box { padding: 24px; }
+.mini-quiz-options { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+.mini-quiz-options button {
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+  min-height: 44px;
+}
+.mini-quiz-options button:hover:not(:disabled) { border-color: var(--primary); }
+.mini-quiz-options button:disabled { cursor: default; }
+.mini-quiz-options button.correct { border-color: var(--success); background: var(--success-bg); }
+.mini-quiz-options button.wrong { border-color: var(--danger); background: var(--danger-bg); }
+.mini-quiz-feedback { margin-top: 14px; padding: 14px; border-radius: var(--radius-sm); display: none; font-size: 0.9rem; }
+.mini-quiz-feedback.show { display: block; }
+.mini-quiz-feedback.feedback-correct { background: var(--success-bg); color: var(--success); }
+.mini-quiz-feedback.feedback-wrong { background: var(--danger-bg); color: var(--danger); }
+
+@media (max-width: 1024px) { .materi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .materi-grid { grid-template-columns: 1fr; } }
