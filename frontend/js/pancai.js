@@ -27,12 +27,7 @@
   ];
 
   // ---------- API base ----------
-  function getApiBase() {
-    const meta = document.querySelector('meta[name="pancalearn-api-base"]');
-    const raw = (window.PANCALEARN_API_BASE || (meta && meta.content) || '').trim();
-    return raw.replace(/\/+$/, '');
-  }
-  const API_BASE = getApiBase();
+  const API_BASE = 'https://pancalearn-production.up.railway.app';
 
   // ---------- Konteks (materi atau studi kasus) ----------
   const params = new URLSearchParams(window.location.search);
