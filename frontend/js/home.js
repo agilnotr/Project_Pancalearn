@@ -47,7 +47,12 @@
     grid.innerHTML = SILA_DATA.map((s, i) => `
       <button type="button" class="card sila-card reveal-on-scroll" data-index="${i}" aria-expanded="false" aria-controls="sila-detail">
         <span class="sila-number">${s.number}</span>
-        <span class="sila-icon" aria-hidden="true">${s.icon}</span>
+        <img
+  class="sila-icon-image"
+  src="images/pancasila/${s.image}"
+  alt=""
+  aria-hidden="true"
+/>
         <span class="sila-title">${s.title}</span>
       </button>
     `).join('');
@@ -56,7 +61,7 @@
       card.addEventListener('click', () => {
         const s = SILA_DATA[card.getAttribute('data-index')];
         grid.querySelectorAll('.sila-card').forEach((c) => c.setAttribute('aria-expanded', String(c === card)));
-        detail.innerHTML = `<h3>${s.icon} Sila ${s.number}: ${s.title}</h3><p>${s.detail}</p>`;
+       detail.innerHTML = `<h3>Sila ${s.number}: ${s.title}</h3><p>${s.detail}</p>`;
         detail.classList.add('open');
         detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });

@@ -2,40 +2,46 @@
    PancaLearn — Static content data
    All learning content lives here so pages stay simple.
    ========================================================= */
+  
 
 const SILA_DATA = [
   {
     number: 1,
     title: 'Ketuhanan Yang Maha Esa',
-    icon: '🙏',
+    icon: '⭐',
+    image: 'sila-1-bintang.png',
     detail:
       'Mengandung nilai ketakwaan kepada Tuhan sesuai agama dan kepercayaan masing-masing, serta menjunjung tinggi toleransi antar umat beragama di kehidupan kampus dan masyarakat.',
   },
   {
     number: 2,
     title: 'Kemanusiaan yang Adil dan Beradab',
-    icon: '🤝',
+    icon: '🔗',
+    image: 'sila-2-rantai.png',
     detail:
       'Menempatkan manusia sesuai harkat dan martabatnya, menghargai perbedaan, menolak diskriminasi, dan mengedepankan sikap saling menghormati.',
   },
   {
     number: 3,
     title: 'Persatuan Indonesia',
-    icon: '🇮🇩',
+    icon: '🌳',
+    image: 'sila-3-beringin.png',
     detail:
       'Mengutamakan persatuan dan kesatuan bangsa di atas kepentingan pribadi atau golongan, termasuk dalam keberagaman suku, budaya, dan pendapat.',
   },
   {
     number: 4,
     title: 'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan',
-    icon: '🗳️',
+    icon: '🐂',
+    image: 'sila-4-banteng.png',
     detail:
       'Mengedepankan musyawarah mufakat dalam pengambilan keputusan, menghargai pendapat orang lain, dan menjunjung tinggi demokrasi.',
   },
   {
     number: 5,
     title: 'Keadilan Sosial bagi Seluruh Rakyat Indonesia',
-    icon: '⚖️',
+    icon: '🌾',
+    image: 'sila-5-padi-kapas.png',
     detail:
       'Mendorong pemerataan kesejahteraan, gotong royong, dan keadilan dalam berbagai aspek kehidupan berbangsa dan bernegara.',
   },
